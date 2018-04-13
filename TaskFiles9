@@ -1,0 +1,61 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Pliki9zad {
+
+	public static void main(String[] args) {
+	
+	String path = "C:\\Pliki\\zadanie9.txt";
+		
+	File plik = new File (path);
+		
+			
+	try
+	
+	{
+		Scanner sc = new Scanner(plik);
+		
+		int count = 0;
+		
+		String mark = "";
+		
+		
+		while(sc.hasNextLine())
+{
+		String nap = sc.nextLine();
+			
+		String[] word = nap.split("" + "-");
+			
+		String[] marks = nap.split("");
+			
+      
+	for (int i = 0; i < marks.length; i++)
+			
+		{
+			
+			count = Integer.parseInt(word[1]);
+			
+			mark = marks[count];
+			
+		}
+				
+			System.out.println("Words ---> " + word[0]);
+				
+			System.out.println("Numbers ---> " + count);
+				
+			System.out.println("The character that was created after applying the number to the word ---> " + mark );
+					
+			System.out.println("--------------------------" + "\n");
+					
+}
+			
+		
+		}catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+
+	}
+
+									}
+					}
