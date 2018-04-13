@@ -1,0 +1,85 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.IntStream;
+import java.util.stream.*;
+
+public class Pliki6zad {
+
+	public static void main(String[] args) {
+
+	String path = "C:\\Pliki\\zadanie6.txt";
+		
+	File plik = new File (path);
+		
+		try
+	{
+			Scanner sc = new Scanner(plik);
+			
+			int suma = 0;
+			
+			int ilosc = 0;
+			
+			int max = Integer.MIN_VALUE;
+			
+			
+			
+			while(sc.hasNextLine())
+				
+		{
+				String napisy = sc.nextLine();
+				
+				String[] licz = napisy.split(",");
+					
+			
+				for (int i = 2; i < licz.length; i++)
+				
+				{
+	
+						int liczby = Integer.parseInt(licz[2]);
+						
+					
+						if (max < liczby)
+						
+						{
+							
+							max = liczby;
+						}
+						
+						suma += liczby;
+						
+						ilosc++;
+				}
+						
+		}
+			
+			
+			
+			System.out.println("Pracownik , który zarabia najwięcej to --> " + max);
+			
+			System.out.println("Suma pensji pracowników wynosi --> " + suma);
+			
+											//--------Średnia--------//
+			
+			int srednia = suma / ilosc ;
+			
+			System.out.println("Średnia arytmetyczna zarobków pracowników wynosi --> " + srednia);
+			
+			
+					
+			
+	
+			
+		
+	}catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+
+
+	}
+
+}
+}
