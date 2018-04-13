@@ -1,0 +1,72 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class Plik8zad {
+
+	public static void main(String[] args) {
+		
+		String path = "C:\\Pliki\\zadanie8.txt";
+		
+		File plik = new File (path);
+		
+		
+		try
+	
+	{
+			Scanner sc = new Scanner(plik);
+			
+			
+			int sumW = 0;
+			
+			int ratioW = 0;
+			
+			try (PrintWriter out = new PrintWriter("C:\\Pliki\\zadanie81.txt")) {
+			
+			while(sc.hasNextLine())
+			{
+				
+				String numbers = sc.nextLine();
+				
+				String[] num = numbers.split(" ");
+				
+				
+			
+				for (int i = 1; i < num.length; i++)
+					
+				{
+					int licz1 = Integer.parseInt(num[0]);
+					
+					int licz2 = Integer.parseInt(num[1]);
+					
+					
+					sumW = licz1 + licz2;
+					
+					ratioW = licz1 * licz2;
+					
+					
+				}
+				
+				
+				
+				System.out.println("Sum--> " + sumW);
+				
+				System.out.println("Ratio --> " + ratioW);
+				
+				System.out.println("-------------------------------------------" );
+				
+				
+				out.println(sumW + " " + ratioW);
+			}
+		
+		}
+			
+		
+	}catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+
+}
+}
+}
