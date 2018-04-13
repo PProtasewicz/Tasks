@@ -1,0 +1,120 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Pliki7zad {
+
+	public static void main(String[] args) {
+	
+	String path = "C:\\Pliki\\temperatury.txt";
+		
+	File plik = new File (path);
+			
+	try
+		{
+		
+	
+		Scanner sc = new Scanner(plik);
+		
+		
+		int NumerRano = 0;
+		
+		int NumerPop = 0;
+		
+		int iloscTemp = 0;
+		
+
+		
+		
+		double min = Double.MAX_VALUE;
+		
+		double max = Double.MIN_NORMAL;
+		
+		double sumaTemp = 0.0;
+		
+		
+		
+		double SredniaTempRano = 0.0;
+		
+		double SredniaTempPop = 0.0;
+		
+		double SredniaTempWiecz = 0.0;
+		
+		
+		
+	while(sc.hasNextLine())
+{
+		
+		String temp = sc.nextLine();
+		
+		String[] srednie = temp.split(";");
+		
+	
+	for (int i = 0; i < srednie.length; i++)
+			
+		{
+			
+			double TempRano = Double.parseDouble(srednie[0]);
+			
+			if(min > TempRano)
+			{
+				min = TempRano;
+				
+				NumerRano++;
+			}
+			
+			
+		}
+		
+	
+	for (int i = 0; i < srednie.length; i++)
+			
+		{
+			
+			double TempPop = Double.parseDouble(srednie[1]);
+			
+			if(max < TempPop)
+			{
+				max = TempPop;
+				
+				NumerPop++;
+			}
+			
+			
+		}
+		
+		
+	for (int i = 2 ; i < srednie.length ; i++)
+		{
+			SredniaTempRano = Double.parseDouble(srednie[0] + "Celsius");
+			
+			SredniaTempPop = Double.parseDouble(srednie[1] + "Celsius");
+			
+			SredniaTempWiecz = Double.parseDouble(srednie[2] + "Celsius");
+			
+			sumaTemp = (SredniaTempRano + SredniaTempPop + SredniaTempWiecz)/3;
+			
+			iloscTemp++;
+			
+		}
+		System.out.println("Średnia temperatura w ciągu dnia " + iloscTemp + " wynosi --> " + sumaTemp);
+}
+	
+		System.out.println("Najmniejsza temperatura rano wynosi --> " +  min + " jest to dzień --> " + NumerRano);
+		
+		System.out.println("Najwieksza temperatura popoludniu wynosi --> " +  max + " jest to dzień --> " + NumerPop);
+		
+		
+	
+		
+
+				
+		}catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	}
+
+}
+}
