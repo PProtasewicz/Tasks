@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Funkcje4zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj pierwszy z boków trójkąta");
+	double a = sc.nextDouble();
+	
+	System.out.println("Podaj drugi z boków trójkąta");
+	double b = sc.nextDouble();
+	
+	System.out.println("Podaj trzeci z boków trójkąta");
+	double c = sc.nextDouble();
+	
+	double wynik = Trojkat(a,b,c);
+
+	}
+	
+	public static double Trojkat(double a , double b , double c)
+	{
+	
+	double twierdzenie = Math.pow(c, 2);
+	double twierdzeniecdn = Math.pow(a,2) + Math.pow(b, 2);
+		
+	if(twierdzenie == twierdzeniecdn)
+	{
+		System.out.println("PRAWDA");
+	}
+	else
+	{
+		System.out.println("FAŁSZ");
+	}
+	return twierdzenie;
+	}
+	
+
+}
