@@ -1,0 +1,38 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Zadanie2 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		
+		Random r = new Random(); 
+		int x = r.nextInt(50 + 49 )+(-50);
+		
+		System.out.println("Wylosowana liczba to " + x );
+		
+		if ( Integer.MIN_VALUE <=x && x >= -40)
+		{
+			System.out.println("Liczba należy do przedziału od - nieskończoności do -40");	
+		}
+		
+		if (-40 <= x && x > -20)
+		{
+			System.out.println("Liczba należy do przedziału od - 40 do -20");	
+		}
+		
+		if (-20 <= x && x >= 20)
+		{
+			System.out.println("Liczba należy do przedziału od - 20 do 40");	
+		}
+		
+		if (20 < x && x >= Integer.MAX_VALUE )
+		{
+			System.out.println("Liczba należy do przedziału od 20 do nieskończoności");	
+		}
+	
+
+	}
+
+}
