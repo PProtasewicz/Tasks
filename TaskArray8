@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Tablice3zad {
+
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj rozmiar oraz elemnty tablicy");
+	
+	int rozmiar = sc.nextInt();
+	
+	double[] tab = new double [rozmiar];
+	
+	for (int i = 0 ; i < tab.length ; i++)
+	{
+		tab[i] = sc.nextDouble();
+	}
+	
+	System.out.println("--------------------Elementy tablicy-------------------- " );
+	
+	for (int i = 0 ; i < tab.length ; i++)
+	{
+		System.out.println(tab[i] );
+	}
+	
+	System.out.println("------------------Zwiekszenie o 10 %------------------ " );
+	
+	double srednia = 0.0;
+	double x = 0.0;
+	double procentx = 0.0;
+	double zwiekszanieox = 0.0;
+	
+	for (int i = 0 ; i < tab.length ; i++)
+	{
+		srednia = tab[i]/rozmiar;
+		x = srednia*2;
+		procentx = 0.9 * x;
+		zwiekszanieox = tab[i] + procentx;
+		
+		System.out.println(zwiekszanieox);
+	}
+	
+	System.out.println("------------------Średnia arytmetyczna------------------ " );
+	
+	System.out.println(srednia);
+	
+	System.out.println("-----------------Średnia arytmetyczna x2 --------------- " );
+	
+	System.out.println(x);
+	
+	System.out.println("--------------------10 % z liczby x  ------------------- " );
+	
+	System.out.println(procentx);
+
+	}
+
+}
