@@ -1,0 +1,40 @@
+import java.util.Random;
+
+public class Zadanie9 {
+
+	public static void main(String[] args) {
+		
+		Random r = new Random();
+		
+		System.out.println("Losujemy liczby");
+		
+		int a = r.nextInt(9);
+		int b = r.nextInt(37)+(-13);
+		int c = r.nextInt(52)+34;
+		
+		System.out.println("Pierwsza liczba: " + a);
+		System.out.println("Druga liczba: " + b);
+		System.out.println("Trzecia liczba: " + c);
+		
+		int srednia = (a + b + c )/3;
+		
+		int najblizsza;
+		
+		najblizsza = a;
+		
+		System.out.println("Srednia arytmetyczna wylosowanych liczb wynosi " + srednia);
+		
+		if (Math.abs(srednia - b ) < Math.abs(srednia -a ))
+		{
+			najblizsza = b;
+		}
+		if (Math.abs(srednia - c) < Math.abs(srednia - b))
+		{
+			najblizsza = c;
+		}
+		
+		System.out.println("Najblizej sredniej arytmetycznej jest liczba " + najblizsza) ;
+
+	}
+
+}
