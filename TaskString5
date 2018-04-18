@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class Napisy5zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj dwa przykładowe napisy");
+	
+	String napis1 = sc.nextLine();
+	
+	String napis2 = sc.nextLine();
+	
+	String samogloski = "";
+	
+	String spolgloski = "";
+	
+	int zliczanie1 = 0;
+	int zliczanie2 = 0;
+	
+	//Zamiana String na char//
+	
+for (int i = 0 ; i < napis1.length() ; i++)
+	{
+		char c = napis1.charAt(i);
+		char nap1 = Character.toLowerCase(c);
+		
+		if (nap1 == 'a' || nap1 == 'e' || nap1 == 'y' || nap1 == 'u' || nap1 == 'i' || nap1 == 'o')
+		{
+			zliczanie1++;
+			samogloski += String.valueOf(napis1.charAt(i));
+		}
+		
+	}
+	System.out.println("-----------------------------------------------------------");
+
+    System.out.println("Napis składa się z " + zliczanie1 + " Samogłosek , a o to one: " + "\n"+ samogloski);
+
+	//Zamiana String na char//
+	
+	for (int i = 0 ; i < napis2.length() ; i++)
+	{
+		char c = napis2.charAt(i);
+		char nap2 = Character.toLowerCase(c);
+		
+		if (nap2 == 'q' || nap2 == 'w' || nap2 == 'r' || nap2 == 't' || nap2 == 'p' || nap2 == 's' || nap2 == 'd' || nap2 == 'f' ||
+			nap2 == 'g' || nap2 == 'h' || nap2 == 'j' || nap2 == 'k' || nap2 == 'l' || nap2 == 'z' || nap2 == 'x' || nap2 == 'c' ||
+			nap2 == 'v' || nap2 == 'b' || nap2 == 'n' || nap2 == 'm')
+		{
+			zliczanie2++;
+			spolgloski += String.valueOf(napis2.charAt(i));
+			
+		}	
+	}
+	System.out.println("-----------------------------------------------------------");
+	
+	System.out.println("Napis składa się z " + zliczanie2 + " Spolglosek , a o to one: " + "\n" + spolgloski );
+	
+
+	//Łączenie charow//
+	String napis3 = new StringBuilder().append(samogloski).append(spolgloski).toString();
+	
+	System.out.println("-----------------------------------------------------------");
+	
+	System.out.println("Napis po łączeniu " + napis3 );
+	
+	
+	}
+
+}
