@@ -1,0 +1,107 @@
+import java.util.Scanner;
+
+public class Zadanie3 {
+
+	public static void main(String[] args) {
+
+ Scanner sc = new Scanner (System.in);
+ 
+ System.out.println("Podaj trzy cyfry");
+ double liczba1 = sc.nextDouble();
+ double liczba2 = sc.nextDouble();
+ double liczba3 = sc.nextDouble();
+ 
+ //Najwieksza liczba//
+ 
+ double sredniamax1=0.0;
+ double sredniamax2=0.0;
+ double sredniamax3=0.0;
+ 
+ double sredniamin1=0.0;
+ double sredniamin2=0.0;
+ double sredniamin3=0.0;
+ 
+ if (liczba1 >= liczba2 && liczba1 >= liczba3 )
+ {
+	 System.out.println("Pierwsza liczba jest największa ");
+	 sredniamax1 = liczba1/3;
+	 System.out.println("Średnia arytmetyczna największej z liczb jest równa" + sredniamax1);
+	 
+ }
+ else if (liczba2 >= liczba1 && liczba2 >= liczba3)
+ {
+	 System.out.println("Druga liczba jest największa " );
+	 sredniamax2=liczba2/3;
+	 System.out.println("Średnia arytmetyczna największej z liczb jest równa" + sredniamax2);
+ }
+ else
+ {
+	 System.out.println("Trzecia liczba jest największa ");
+	 sredniamax3=liczba3/3;
+	 System.out.println("Średnia arytmetyczna największej z liczb jest równa " + sredniamax3);
+ }
+ 
+ 
+ //Najmniejsza liczba//
+ 
+ 
+ if (liczba1 <= liczba2 && liczba1 <= liczba3 )
+ {
+	 System.out.println("Pierwsza liczba jest najmniejsza " );
+	 sredniamin1 = liczba1/3;
+	 System.out.println("Średnia arytmetyczna najmniejszej z liczb jest równa" + sredniamin1);
+	 
+ }
+ else if (liczba2 <= liczba1 && liczba2 <= liczba3)
+ {
+	 System.out.println("Druga liczba jest najmniejsza " );
+	 sredniamin2=liczba2/3;
+	 System.out.println("Średnia arytmetyczna najmniejszej z liczb jest równa" + sredniamin2);
+ }
+ else
+ {
+	 System.out.println("Trzecia liczba jest najmniejsza ");
+	 sredniamin3=liczba3/3;
+	 System.out.println("Średnia arytmetyczna najmniejszej z liczb jest równa" + sredniamin3);
+ }
+ 
+ 
+ if (liczba1 >= liczba2 && liczba1 <= liczba3 )
+ {
+	 
+	System.out.println("Pierwsza liczba jest liczbą środkową");
+	
+	if(sredniamin1 > liczba1)
+	{
+		System.out.println("Srednia jest większa od pierwszej liczby");
+	}
+	 
+	 
+ }
+ else if (liczba2 >= liczba1 && liczba2 <= liczba3)
+ {
+	System.out.println("Druga liczba jest liczbą środkową");
+	
+	if(sredniamin2 > liczba2)
+	{
+		System.out.println("Srednia jest większa od drugiej liczby");
+	}
+	
+ }
+ else
+ {
+	System.out.println("Trzecia liczba jest liczbą środkową");
+	
+	if(sredniamin3 > liczba3)
+	{
+		System.out.println("Srednia jest większa od trzeciej liczby");
+	}
+ }
+ 
+ 
+ 
+ 
+
+	}
+
+}
