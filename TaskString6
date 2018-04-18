@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class Napisy6zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj przykladowy napis");
+	
+	String napis = sc.nextLine();
+	
+	String zamiana = "";
+	
+	int licznik = 0;
+	
+	char c = napis.charAt(0);
+	
+	char[] c_arr = napis.toCharArray();
+
+	
+    System.out.println("Napis został zamieniony na pojedyńcze znaki ");
+	
+	System.out.println("----------------------------------------------------------------------------");
+	
+	int[] kod_ascii = new int[c_arr.length];
+	
+	for ( int i = 0 ; i < c_arr.length ; i++)
+	{
+		
+		 kod_ascii[i] = (int) c_arr[i];
+		 
+		 System.out.println("Litery zamienione na tablice ascii " + kod_ascii[i] + " odpowiada znakowi " + c_arr[i]);
+	}
+    System.out.println("----------------------------------------------------------------------------");
+    
+    for ( int j = 0 ; j < c_arr.length ; j++)
+    {
+    int ascii = c_arr[j];
+   	 
+    if(c_arr[j] % 2 == 0)
+	 {
+		 ascii+=10;
+	 }
+	 else
+	 {
+		 ascii-=5;
+	 }
+    
+    zamiana = Character.toString ((char) ascii);
+    
+    if(zamiana.matches("[a-zA-Z]+"))
+    {
+      licznik++;
+    }
+
+	  System.out.println("Litery zamienione " + ascii +  " odpowiada znakowi " + zamiana);
+	
+    }
+    System.out.println("Nowy napis składa się z " + licznik + " liter");
+    System.out.println("----------------------------------------------------------------------------");
+    
+	}
+
+
+}
