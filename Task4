@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Zadanie4 {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Proszę podaj dwa boki trójkąta równobocznego");
+	
+	double bok1 = sc.nextDouble();
+	double bok2 = sc.nextDouble();
+	
+	double poletrojkata1= ((Math.pow(bok1, 2)* Math.sqrt(3)))/4;
+	
+	System.out.println("Pole trójkąta równobocznego dla pierwszego z boków wynosi " + poletrojkata1);
+	
+	double poletrojkata2= ((Math.pow(bok2, 2)* Math.sqrt(3)))/4;
+	
+	System.out.println("Pole trójkąta równobocznego dla pierwszego z boków wynosi " + poletrojkata2);
+	
+	double procentpola = (100*poletrojkata2)/poletrojkata1;
+	
+	System.out.format("%.2f%n" , procentpola);
+	
+	System.out.println("Procent pola pierwszego z trójkątów do drugiego wynosi " + procentpola);
+	
+
+	}
+
+}
