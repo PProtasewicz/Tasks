@@ -1,0 +1,133 @@
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+import org.apache.commons.lang3.ArrayUtils;
+
+public class Funkcje10zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("ZADANIE 10 TABLICE");
+	System.out.println("------------------------------");
+
+	System.out.println("TABLICA 1");
+	int tab1[] = new int[10];
+	
+	System.out.println("------------------------------");
+	
+	System.out.println("TABLICA 2");
+
+	int tab2[] = new int[8];
+	
+	System.out.println("------------------------------");
+	
+    
+    for (int i = 0 ; i < tab1.length ; i++)
+    {
+    	System.out.println("Wprowadz dane do pierwszej tablicy");
+    	
+    	tab1[i] = sc.nextInt();
+    }
+    
+    System.out.println("------------------------------");
+    
+    for (int j = 0 ; j < tab2.length ; j++)
+    {
+    	System.out.println("Wprowadz dane do drugiej tablicy");
+    	
+    	tab2[j] = sc.nextInt();
+    }
+    
+    System.out.println("------------------------------");
+    
+    for (int i = 0 ; i < tab1.length ; i++)
+    {
+    	System.out.println("Elementy pierwszej tablicy to: " + tab1[i] + "\n" + "\n" + "------------------------------");
+    }
+    
+    System.out.println("\n" + "*****************************************" + "\n");
+    
+    for (int j = 0 ; j < tab2.length ; j++)
+    {
+    	System.out.println("Elementy drugiej tablicy to: " + tab2[j] + "\n" + "\n" + "------------------------------");
+    }
+    
+    int tab = Tablice(tab1 , tab2);
+    
+
+	}
+	
+	public static int Tablice(int tab1[] , int tab2[])
+	{
+		
+	int srednia1 = 0;
+	int srednia2 = 0;
+	
+	int najwieksza1 = 0;
+	int najwieksza2 = 0;
+		
+		
+		for (int i = 0 ; i < tab1.length ; i++)
+		{
+			srednia1 += tab1[i]/10;
+			
+			
+		}
+		System.out.println("Średnia pierwszej tablicy wynosi " + srednia1);
+		for (int j = 0 ; j < tab2.length ; j++)
+		{
+			srednia2 += tab2[j]/8;
+			
+			
+		}
+		System.out.println("Średnia drugiej tablicy wynosi " + srednia2);
+		
+		
+		for (int i = 0 ; i < tab1.length ; i++)
+		{
+			for (int j = 0 ; j < tab2.length ; j++)
+				
+			{
+				
+				
+				if(srednia1 > srednia2)
+				{
+					Arrays.sort(tab1);
+					ArrayUtils.reverse(tab1);
+					
+					najwieksza1 = tab1[0];
+					
+				}
+				
+				if(srednia1 < srednia2)
+				
+				{
+					Arrays.sort(tab2);
+					ArrayUtils.reverse(tab2);
+				
+					najwieksza2 = tab2[0];
+					
+				}
+				
+				
+			}
+			
+			
+		}
+		
+		
+		System.out.println("Największy element pierwszej tablicy to " + najwieksza1);
+		
+		System.out.println("Największy element drugiej tablicy to " + najwieksza2);
+		
+		
+		
+	return 0;
+		
+	}
+
+}
