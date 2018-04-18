@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Funkcje3zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj pierwszą liczbe a");
+	
+	double a = sc.nextDouble();
+	
+	System.out.println("Podaj drugą liczbe b");
+	
+	double b = sc.nextDouble();
+	
+	System.out.println("Podaj drugą liczbe c");
+	
+	double c = sc.nextDouble();
+	
+	double wynik = Najwieksza(a,b,c);
+	
+}
+	
+	public static double Najwieksza(double a , double b , double c)
+	{
+		double max = Math.max(Math.max(a,b),c);
+		
+		System.out.println("Najwieksza liczbą jest: " + max);
+		
+		return max;
+	}
+		
+}
+
+
