@@ -1,0 +1,38 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Tablice9zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	Random r = new Random();
+	
+	System.out.println("Losujemy rozmiar tablicy");
+	
+	int rozmiar = r.nextInt(22)+9;
+	
+	System.out.println(rozmiar);
+	
+	System.out.println("-------------------------------------");
+
+	int[] tab = new int [rozmiar];
+	
+
+	for (int i = 3 ; i < tab.length ; i++)
+		
+		{
+			tab[i] = r.nextInt(27)+2;
+			
+			if (tab[i] % 3 == 0)
+			
+			{
+				System.out.println(tab[i]);
+			}
+		}
+		
+	
+	}
+
+}
