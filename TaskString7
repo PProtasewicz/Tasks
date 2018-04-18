@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Napisy7zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	String nap1 = "";
+	
+	String nap2 = "";
+	
+	String nap3 = "";
+	
+	do{
+		System.out.println("Podaj dwa przykladowe napisy");
+		
+		nap1 = sc.nextLine();
+		nap2 = sc.nextLine();
+		
+	}while(nap1.length() != nap2.length());
+
+	System.out.println("Napisy są takiej samej długości");
+
+    
+    for(int i = 0 , j = 0 ; i < nap1.length() && j < nap2.length(); i++ , j++)
+    {
+    	{
+    		if (nap1.length() == nap2.length())
+    		{
+    			nap3 += nap2.charAt(i);
+    			nap3 += nap1.charAt(i);
+    		}
+    	}
+   
+    }
+    System.out.println("Napis po łączeniu " + nap3 );
+    
+    
+	}
+
+}
