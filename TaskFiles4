@@ -1,0 +1,60 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Pliki2zad {
+
+	public static void main(String[] args) {
+	
+	String path = "C:\\Pliki\\tablicaDwa.txt";
+		
+	File plik = new File (path);
+	
+	try
+	{
+	Scanner sc = new Scanner(plik);
+	
+	int W = sc.nextInt();
+    int K = sc.nextInt();
+    int tab[][] = new int[W][K];
+    
+    int[] wiersze = new int[tab.length];
+	
+    
+	while(sc.hasNextLine())
+	{
+		
+	for (int i = 0 ; i < tab.length ; i++)
+		{
+		
+			wiersze[i] = 0;
+			
+			for (int j = 0 ; j < tab[i].length ; j++)
+			
+			{
+				if(sc.hasNextInt())
+				{
+		            tab[i][j] = sc.nextInt();
+		            wiersze[i] += tab[i][j];
+		            
+		        }
+	
+				
+			System.out.print(tab[i][j] + " " + "| ");
+			
+			}
+			System.out.print("\n"+ "__|___|___|___|");
+			System.out.println("\n" + "\n" +"\n"+ "Suma pojedyńczego wiersza to: " + wiersze[i] + "\n");
+			
+		}
+	}
+	
+
+	sc.close();
+		
+	}catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+}
