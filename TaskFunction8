@@ -1,0 +1,48 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+import org.apache.commons.lang3.ArrayUtils;
+
+
+public class Funkcje7zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	System.out.println("TABLICA");
+	int tab2[] = new int[10];
+
+	System.out.println("------------------------------");
+	
+	for (int i = 0 ; i < tab2.length ; i++ )
+	{
+		System.out.println("Podaj elementy tablicy");
+		tab2[i] = sc.nextInt();
+	}
+	
+	for (int i = 0 ; i < tab2.length ; i++)
+	{
+		System.out.println("Elementy tablicy to: " + tab2[i] + "\n" + "------------------------------");
+	}
+	
+	int t = Tablica2(tab2);
+	
+	}
+	
+	public static int Tablica2(int tab2[])
+	{
+	
+	for (int i = 0 ; i < tab2.length ; i++)
+	{
+		Arrays.sort(tab2);
+		ArrayUtils.reverse(tab2);
+		
+	}
+	System.out.println("Trzeci do do wielkości element tablicy to: " + tab2[3]);
+		
+		return 0;
+		
+	}
+
+}
