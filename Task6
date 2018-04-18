@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Zadanie7 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		int liczba;
+		
+		  List<Integer> liczby = new ArrayList<Integer>();
+		
+		do
+		{
+			System.out.println("Podaj liczbę ");
+			liczba = sc.nextInt();
+			liczby.add(liczba);
+			
+		} while (liczba < 101);
+		if(liczby.size() == 0){
+			
+			System.exit(0);
+		}
+		 System.out.println("Podane liczby to: " + liczby);
+	        
+		 int result = liczby(0);
+	     int maximum = sum (result);
+	        for (int licz : liczby) {
+	             int sum = sum (Math.abs(licz));
+	             if (sum > maximum) {
+	                 maximum = sum;
+	                 result = licz;
+	             }
+	        }       
+		
+
+	}
+
+	private static int liczby(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	private static int sum(int abs) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
+
+
