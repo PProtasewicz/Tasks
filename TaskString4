@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Napisy3zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj przykładowy napis ");
+
+	String napis = sc.nextLine();
+	
+	String[] tabNap = napis.split(" ");
+	
+for ( int i = 0 ; i < tabNap.length; i++)
+	{
+		System.out.println(tabNap[i]);
+	}
+
+int malelitery = 0;
+int Duzelitery = 0;
+int Liczby = 0;
+
+for ( int i = 0 ; i < napis.length() ; i++)
+	
+{
+	char c = napis.charAt(i); 
+	
+	if (Character.isLowerCase(c) == true)
+	{
+		malelitery ++;
+	}
+	
+	if(Character.isUpperCase(c) == true)
+	{
+		Duzelitery ++;
+	}
+	
+	if(Character.isDigit(c) == true)
+	{
+		Liczby ++;
+	}
+	
+}
+	
+	System.out.println("Napis składa się z " + malelitery + " małych liter " + Duzelitery + " dużej litery " + "i z " + Liczby + " liczby");
+	
+
+
+	}
+
+}
