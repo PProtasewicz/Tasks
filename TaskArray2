@@ -1,0 +1,79 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Tablice_zadanie_pierwsze {
+
+	public static void main(String[] args) {
+		
+		Random random = new Random();
+		Scanner sc = new Scanner(System.in);
+		
+		int W = random.nextInt(8)+3;
+		System.out.println("Wiersze"+ "\n" +  W);
+		int K = random.nextInt(8)+3;
+		System.out.println("Kolumny"+ "\n" +  K);
+		
+		if(W == K )
+		{
+			System.out.println("Tablica jest kwadratowa " + "\n");
+			
+			int tab[][] = new int [W][K];
+			
+			for (int i = 0 ; i < tab.length ; i++)
+			{
+				for(int j = 0 ; j < tab.length ; j++)
+				{
+					tab[i][j] = random.nextInt(17)+4;
+				}
+			}
+			for (int i = 0 ; i < tab.length ; i++)
+			{
+				for(int j = 0 ; j < tab.length ; j++)
+				{
+					System.out.println(tab[i][j] + ", ");
+				}
+			 System.out.println("" + "******************");
+			}
+			
+			int suma1 = 0;
+			
+			for (int i = 0 ; i < tab.length ; i++)
+			{
+				for(int j = 0 ; j < tab.length ; j++)
+				{
+					
+					suma1 += tab[i][j];
+				}
+				
+			}
+			System.out.println("SUMA KOLUMN" +"\n" + suma1 + "\n");
+			System.out.println("" + "******************");
+			
+			int suma2 = 0;
+			
+			for (int i = 0 ; i < tab.length ; i++)
+			{
+				for(int j = 0 ; j < tab.length ; j++)
+				{
+					
+					suma2 += tab[j][i];
+					
+				}
+			
+			}
+			System.out.println("SUMA WIERSZY" +"\n" + suma2 + "\n" );
+			System.out.println("" + "******************");
+		}
+		else
+		{
+			System.out.println("Losuj dalej");
+		}
+		
+		
+		
+		
+		
+
+	}
+
+}
