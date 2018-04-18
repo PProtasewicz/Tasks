@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Funkcje1zad {
+	
+public static void main(String[] args) 
+{
+	      
+ Scanner sc = new Scanner(System.in);
+ 
+ System.out.println("Podaj liczbę a: ");
+ double a = Double.parseDouble(sc.nextLine());
+ 
+ System.out.println("Podaj liczbę b: ");
+ double b = Double.parseDouble(sc.nextLine());
+ 
+ System.out.println("Podaj liczbę c: ");
+ double c = Double.parseDouble(sc.nextLine());
+ 
+ double wynik = miejsceZerowe(a,b,c);
+}
+
+public static double miejsceZerowe(double a, double b, double c ){
+	
+	double delta = Math.pow(b,2) - 4 * a * c;
+	
+	if (delta > 0)
+	{
+        
+    double x1 = (-b + Math.sqrt(delta))/(2 * a);
+    
+    double x2 = (-b - Math.sqrt(delta))/(2 * a);
+        
+    System.out.println("DWA MIEJSCA ZEROWE: " + "\n" + x1 + "\n" + x2);
+    
+	}
+    else if (delta == 0)
+    {
+    	
+    double x = -b/(2 * a);
+    
+    System.out.println("JEDNO MIEJSCE ZEROWE: " + x);
+    } 
+    else  
+    {
+      System.out.println("NIE MA MIEJSC ZEROWYCH");
+    }
+	
+
+    return delta;
+
+}
+
+}
+
+
+
+
