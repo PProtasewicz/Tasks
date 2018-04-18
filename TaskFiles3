@@ -1,0 +1,49 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Pliki1zad {
+
+	public static void main(String[] args) {
+	
+	String path = "C:\\Pliki\\tablica.txt";
+		
+	File plik = new File (path);
+		
+		
+		try
+		{
+			int suma  = 0;
+			
+			Scanner sc = new Scanner(plik);
+			while(sc.hasNextLine())
+			{
+				String wiersz = sc.nextLine(); 
+				
+				String[] liczby = wiersz.split(" ");
+				
+				for (int i = 0; i < liczby.length; i++)
+				{
+					int x = Integer.parseInt(liczby[i]);
+					suma += x;
+			
+				}
+			}
+				System.out.println(suma);
+			  
+		
+			
+			
+		sc.close();
+		
+				
+		}catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+}
+
+}
+}
+
+
