@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Napisy8zad {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj przykladowy napis");
+	
+	String napis = sc.nextLine();
+	
+	String[] tabNap = napis.split(" ");
+	
+	int licznikDuze = 0;
+	
+	int licznikMale = 0;
+	
+	for ( int i = 0 ; i < tabNap.length; i++)
+	{
+		System.out.println(tabNap[i]);
+	}
+	
+	for(int i=0; i < napis.length(); i++){
+		
+		char c = napis.charAt(i);
+		
+		if(c >= 65 && c <= 90) 
+		{
+			licznikDuze++;
+		}
+		if(c >= 97 && c <= 122)
+		{
+			licznikMale++;
+		}
+	}
+	
+	
+	System.out.println("Ilość wyrazów zaczynających się z dużej litery " + licznikDuze);
+	
+	System.out.println("Ilość wyrazów zaczynających się z malej litery " + licznikMale);
+	
+	
+	
+	
+	}
+
+}
