@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Zadanie6 {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj trzy liczby a , b oraz c ");
+	
+	int a = sc.nextInt();
+	int b = sc.nextInt();
+	int c = sc.nextInt();
+	
+	int iloczyn = a*b*c;
+	
+	if(!(a < c) && !(b < c) && !(a < b))
+		
+	{
+		System.out.println("Nie zachodzi warunek a < b < c");
+	
+	if (iloczyn <= 10 )
+	{
+		System.out.println("Iloczyn liczb jest mniejszy niż 10 , wpisz ponownie liczby \n" + iloczyn);	
+		
+		a = sc.nextInt();
+		b = sc.nextInt();
+		c = sc.nextInt();
+		iloczyn = a*b*c;
+		
+	}
+	}
+	
+	if (iloczyn > 10)
+	{
+	
+	System.out.println("Iloczyn jest większny niż liczba 10:  \n" + iloczyn);
+	}
+	int suma1 = a+b;
+	int suma2 = b+c;
+	
+	if (suma1 > suma2)
+	{
+		System.out.println("Suma liczb a i b jest większa: \n" + suma1);
+	}
+	else
+	{
+		System.out.print("Suma liczb b i c jest większa: \n" + suma2);
+	}
+	
+	}
+	
+	
+}
+
+
