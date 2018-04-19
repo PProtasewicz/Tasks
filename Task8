@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner (System.in);
+	
+	String menu = ("Podaj liczbe ktora chcesz przekonwertowac \n"
+			+ "1. System dziesietny na dwojkowy \n"
+			+ "2. System dziesietny na trojkowy \n"
+			+ "3. Wpisz 3 aby wyjsc ");
+	
+	String system2 ;
+	String system3 ;
+	boolean koniec = false;
+	int liczba ;
+	
+	int wybor = ' ' ;
+	 
+    
+    do
+    {
+    	System.out.print ("Wybierz" + "\n" + menu + "\n");
+        wybor = sc.nextInt();
+
+    switch(wybor)
+	{
+	
+	case 1:
+	System.out.println("Podaj liczbe jaka chcesz zamienic ");
+	liczba = sc.nextInt();
+	
+	if (liczba <= 0)
+	
+			System.out.println("Podana liczba jest ujemna");
+	
+			
+    system2 = "";
+	
+    while (liczba != 0)
+	{
+			if (system2.length() % 5 == 0)
+				
+				system2 = " " + system2;		
+				system2 = (liczba % 2) + system2;
+				liczba /= 2;
+	}
+	System.out.println("Z systemu dziesietnego na dwojkowy " + system2);
+	break;
+	
+	case 2:
+	System.out.println("Podaj liczbe jaka chcesz zamienic ");
+	liczba = sc.nextInt();
+	
+	if (liczba <= 0)
+	
+			System.out.println("Podana liczba jest ujemna");
+	
+	system3 = "";
+	while (liczba != 0)
+	{
+		if (system3.length() % 5 == 0)
+			
+			system3 = " " + system3;
+			system3 = (liczba % 3) + system3;
+			liczba /= 3;
+	}
+    System.out.println("Z systemu dziesietnego na trojkowy " + system3);
+	break;
+			
+	case 3:
+	
+	koniec = true;
+	System.out.println("Koniec");
+	
+
+	}
+} while (!koniec);
+	
+	}
+}
