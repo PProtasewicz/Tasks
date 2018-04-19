@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Okrag2 {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Podaj wspolrzedne pierwszego okregu ");
+	double O1x = sc.nextDouble();
+	double O1y = sc.nextDouble();
+	
+	System.out.println("Podaj promien pierwszego okregu");
+	int r1 = sc.nextInt();
+	
+	System.out.println("Podaj wspolrzedna drugiego okregu");
+	double O2x = sc.nextDouble();
+	double O2y = sc.nextDouble();
+	
+	System.out.println("Podaj promien drugiego okregu");
+	int r2 = sc.nextInt();
+	
+	double odleglosc = Math.sqrt((O1x - O2x)*(O1x - O2x) + (O1y - O2y)*(O1y - O2y));
+	
+	if (odleglosc == r1+r2)
+	{
+		System.out.println("Okregi sa styczne zewnetrznie");
+	}
+	if (odleglosc == r2-r1)
+	{
+		System.out.println("Okregi sa styczne wewnetrznie");
+	}
+	else
+	{
+		System.out.println("Okregi sie przecinaja");
+	}
+	
+
+	}
+
+}
